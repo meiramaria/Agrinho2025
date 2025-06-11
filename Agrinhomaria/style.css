@@ -1,0 +1,249 @@
+/* Variáveis para cores */
+:root {
+    --color-primary: #28a745; /* Verde Agrinho */
+    --color-secondary: #007bff; /* Azul vibrante */
+    --color-text: #333;
+    --color-light-gray: #f8f9fa;
+    --color-white: #fff;
+    --color-dark: #212529;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-light-gray);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--color-white);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo {
+    height: 50px; /* Ajuste o tamanho do logo */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none; /* Escondido por padrão em telas grandes */
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--color-dark);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/campo-cidade-hero.jpg') no-repeat center center/cover;
+    color: var(--color-white);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    margin-top: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.main-footer .social-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.main-footer .social-links a:hover {
+    color: var(--color-primary);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .main-header .main-nav {
+        display: none; /* Esconde o menu de navegação em telas menores */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Ajuste conforme a altura do header */
+        left: 0;
+        background-color: var(--color-white);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .main-header .main-nav.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão de menu hamburguer */
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+}
