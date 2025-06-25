@@ -1,11 +1,6 @@
 # Agrinho2025
 Conectando Campo e Cidade: Um Projeto HTML no VS Code
-Que legal a ideia de conectar o campo e a cidade! Podemos criar um projeto HTML simples no VS Code para explorar essa relação. Vou te dar o código base e algumas ideias para você expandir.
 
-Estrutura do Projeto
-Vamos começar com uma estrutura de pastas básica. Crie uma pasta para o seu projeto, por exemplo, campo_cidade. Dentro dela, teremos os seguintes arquivos:
-
-index.html: O arquivo principal da nossa página.
 style.css: Para estilizar a página (cores, fontes, layout).
 script.js: Para adicionar interatividade (se você quiser ir além do básico).
 Código HTML (index.html)
